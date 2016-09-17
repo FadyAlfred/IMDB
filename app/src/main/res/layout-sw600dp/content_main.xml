@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="50dp"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:id="@+id/main_dublicated"
+    tools:context="com.example.fady_.imdb.MainActivity">
+
+
+
+    <!--
+    This layout is a two-pane layout for the Items master/detail flow.
+    -->
+
+    <fragment
+        android:id="@+id/fragment_movies"
+        android:name="com.example.fady_.imdb.MainActivityFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        tools:layout = "@layout/fragment_main"/>
+
+    <FrameLayout
+        android:id="@+id/movie_detail_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:layout_weight="4"
+        tools:layout = "@layout/fragment_detail"
+        />
+
+</LinearLayout>
